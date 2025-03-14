@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Так мы применим парамет ко всем:
+* {
+    padding: 0;
+    margin: 0;
+}  */
+body {
+    background-color: #f1f1f1;
+    color: #0f141e;
+
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    padding-bottom: 150px;
+
+    /* font: normal 18px "Roboto", sans-serif;   */
+}
+
+.iframe-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* Соотношение сторон 16:9 (стандартное для видео) */
+    overflow: hidden;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; /* Убираем границу */
+}
+
+label, input, textarea {
+    font-family: inherit; /* Наследование шрифта */
+    font-size: inherit;   /* Наследование размера шрифта */
+  }
+
+a {
+    color: black;
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    color: rgb(117, 5, 130);
+}
+
+a:visited {
+    color: orange;
+}
+
+.avatar {
+    width:200px;
+    border-radius: 25%;
+    box-shadow: 19px 19px 14px rgba(0, 0, 0, 0.25);
+    margin-bottom: 40px;
+}
+
+.info {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 700px) {
+    .info {
+        display: block;
+        text-align: center;
+    }
+}
+.info p {
+    color: #86898f;
+    margin: 5px;
+    /* 
+    font-style: italic; - курсив
+    font-weight: bold; - жирный 
+    text-decoration: underline; - подчеркнтутый 
+    text-transform: uppercase; - вверхний регистр
+    letter-spacing: 10px; - межбуквенное растояние
+    word-spacing: 42px; - растояние между словами
+    */
+}
+
+.info p:last-of-type{
+    margin-bottom: 20px;  
+}  
+
+.info-text {
+    margin-left: 60px;
+}
+.info-text strong {
+    margin-bottom: 10px;
+}
+.container {
+    max-width: 75%;
+    margin: auto;
+    padding-top: 40px;
+}
+/* .social {
+    background-color: red; */
+    /* padding: 15px; */
+    /* padding: 0px 15px;  */
+    /* 
+    padding: 4 значения по часовой; 
+    2 значения 1-е вертикаль 2-е горизонталь; 
+    3 значения 1-е вверх 2-е и 3-е горизонталь 4-е низ.
+    1 значение равный отступ
+    */
+    /* border: 5px solid green;
+    margin: 20px; */
+/* } */
+
+/* Рабочий способ выравнивания дива: */
+ /* #box-model div{
+   float: left;
+    background-color: grey;
+    height: 200px;
+    width: calc(25% - 10%); 
+    box-sizing: border-box;
+    border: 4px solid red;
+    margin: 0px 5px;
+    
+} */
+
+/* Рабочий способ выравнивания дива: */
+/* 
+  #box-model {
+    display: flex;
+    gap: 10px; - Отступы между дочерними элементами 
+}
+
+#box-model > * {
+    background-color: grey;
+    flex: 1; - Каждый элемент занимает равное пространство 
+    height: 200px; - Высота элементов 
+    border: 4px solid red; - Граница элементов 
+    box-sizing: border-box; - Учитываем padding и border в размерах 
+}
+*/
+
+.bg-yellow {
+    background: #fff9dc;
+}
+
+.bg-green {
+    background: #e5ffe7;
+}
+
+.bg-red {
+    background: #ffe5e5;
+}
+
+.card {
+    padding:15px 20px;
+    margin-bottom: 20px;
+    border-radius: 20px
+}
+
+.list {
+    padding: 0 25px;
+
+}
+
+.list li {
+    color: #86898f;
+    margin-bottom:10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.table {
+    width: 100%;
+}
+
+.table th {
+    text-align: left;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    
+}
+
+.table td {
+    padding-bottom: 10px;
+}
+
+.table tr:first-child td {
+    padding-top: 10px;
+}
+
+.table td:nth-child(2), 
+.table td:nth-child(3) {
+    color: #86898f;
+}
+
+/* окрасит строки: even - четные, odd - нечетные */
+/* .table tr:nth-child(even) {
+    background: grey;
+} */
+
+.contact h2 {
+    text-align: center;
+}
+
+
+.form-group label {
+    display: block;
+    color: #86898f;
+}
+
+.form-group input,
+.form-group textarea 
+{
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #ccc;
+    color: #000;
+    padding: 15px 0 10px;
+    outline: none;
+    font-size: 16px;
+}
+
+.row {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.row > .form-group {
+    width: 50%;
+    margin-right: 20px;
+}
+
+.row > .form-group:last-child {
+    margin-right: 0px;
+}
+
+.btn {
+    background-color: #111;
+    padding: 15px 20px;
+    color: #fff;
+    border: none;
+    /* font-family: inherit; */
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.box {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    background: lightcoral;
+}
